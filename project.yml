@@ -1,0 +1,38 @@
+# This is the configuration file for the test project.
+
+program : project
+loop: 1     #用例循环次数 1,2,3
+timeout: 66600s # case超时时间
+
+# test logger config
+# debug info warn error critical
+log:
+  file:
+    enabled: true
+    level: info
+    format: "%(process)d:%(filename)s:%(lineno)d:%(asctime)s-%(levelname)s >> %(message)s"
+#    log_path: "./test.log"   #当前项目路径下日志，后期根据测试执行时间、测试产品和模块进行区分
+    size: 504857600
+    back_up_count: 6
+  console:
+    enabled: true
+    level: info
+    format: "%(message)s"
+
+#report:
+#  isSendMail: false  # 配置是否发送邮件
+#  emailServerHost: mail.corp.qihoo.net
+#  emailUser: chentian@360.cn
+#  emailUserPassWord:
+#  emailFrom: chentian@360.cn
+#  emailTo: chentian@360.cn
+#  emailCC:  chentian@360.cn
+#  emailSubject: 测试报告
+#  emailMessageBody: 自动化报告
+#  isSendIm: true  # 配置是否发送邮件
+#  imToUser: chentian
+#  imToGroups:
+
+
+
+
